@@ -13,3 +13,8 @@ export type Movie = {
   genres: string[];
   _id: string;
 };
+
+export type Prediction = {
+  candidate: Movie;
+  ranking: number;
+};

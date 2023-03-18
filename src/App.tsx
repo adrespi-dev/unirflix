@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { RecoilRoot } from "recoil";
 import { Layout } from "./Layout";
 import { Split } from "./split/Split";
 
@@ -10,9 +11,11 @@ const queryClient = new QueryClient({
 const App: FC = () => {
   return (
     <QueryClientProvider client={queryClient}>
-      <Layout>
-        <Split />
-      </Layout>
+      <RecoilRoot>
+        <Layout>
+          <Split />
+        </Layout>
+      </RecoilRoot>
     </QueryClientProvider>
   );
 };
